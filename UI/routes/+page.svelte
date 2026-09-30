@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { authenticate, type AuthRequest } from "$lib/tauri";
+  import { authenticate, type AuthRequest, type ApiResponse } from "$lib/auth";
 
   type AuthMode = AuthRequest["mode"];
 
@@ -28,9 +28,9 @@
     };
 
     try {
-      await authenticate(request);
+      let response: ApiResponse = await authenticate(request);
       notice = {
-        text: "Authentication request completed.",
+        text: `Authentication request completed`,
         error: false,
       };
     } catch (error) {
@@ -53,7 +53,7 @@
 
 <main class="auth-page">
   <section class="auth-form" aria-labelledby="auth-title">
-    <a class="brand" href="/">Ko Insight</a>
+    <a class="brand" href="/">Welcome User</a>
     <h1 id="auth-title">
       {mode === "signIn" ? "Sign in" : "Create account"}
     </h1>
