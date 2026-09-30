@@ -1,5 +1,7 @@
 <script lang="ts">
   import { authenticate, type AuthRequest, type ApiResponse } from "$lib/auth";
+  import { goto } from "$app/navigation";
+  import { setUser } from "$lib/auth-store.svelte";
 
   type AuthMode = AuthRequest["mode"];
 
@@ -29,6 +31,11 @@
 
     try {
       let response: ApiResponse = await authenticate(request);
+      if (response.success) {
+        setUser(response.data.user);
+
+        await goto("/dashboard");
+      }
       notice = {
         text: `Authentication request completed`,
         error: false,

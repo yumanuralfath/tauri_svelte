@@ -1,110 +1,110 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    min-width: 320px;
-    min-height: 100vh;
-    margin: 0;
-    color: #202b27;
-    background: #f8f7f2;
-    font-family: "DM Sans", "Avenir Next", sans-serif;
-    -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: #202b27;
+  background: #f8f7f2;
+  font-family: "DM Sans", "Avenir Next", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 button,
 input {
-    font: inherit;
+  font: inherit;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .auth-page {
-    display: grid;
-    min-height: 100vh;
-    padding: 24px;
-    place-items: center;
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+  place-items: center;
 }
 
 .auth-form {
-    width: min(100%, 360px);
+  width: min(100%, 360px);
 }
 
 .brand {
-    color: inherit;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 h1 {
-    margin: 28px 0 20px;
-    font-size: 24px;
+  margin: 28px 0 20px;
+  font-size: 24px;
 }
 
 .mode-switch {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .mode-switch button,
 .submit-button {
-    min-height: 40px;
-    padding: 0 12px;
-    border: 1px solid #c9cec8;
-    color: inherit;
-    background: transparent;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid #c9cec8;
+  color: inherit;
+  background: transparent;
 }
 
 .mode-switch button.active,
 .submit-button {
-    border-color: #245c4a;
-    color: white;
-    background: #245c4a;
+  border-color: #245c4a;
+  color: white;
+  background: #245c4a;
 }
 
 form,
 label {
-    display: grid;
-    gap: 8px;
+  display: grid;
+  gap: 8px;
 }
 
 form {
-    gap: 16px;
+  gap: 16px;
 }
 
 label {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 input {
-    width: 100%;
-    min-height: 40px;
-    padding: 8px 10px;
-    border: 1px solid #c9cec8;
-    border-radius: 2px;
-    background: white;
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #c9cec8;
+  border-radius: 2px;
+  background: white;
 }
 
 input:focus-visible,
 button:focus-visible {
-    outline: 2px solid #c45f43;
-    outline-offset: 2px;
+  outline: 2px solid #c45f43;
+  outline-offset: 2px;
 }
 
 .submit-button:disabled {
-    cursor: wait;
-    opacity: 0.7;
+  cursor: wait;
+  opacity: 0.7;
 }
 
 .notice {
-    margin: 16px 0 0;
-    font-size: 14px;
+  margin: 16px 0 0;
+  font-size: 14px;
 }
 
 .notice.error {
-    color: #a33f2b;
+  color: #a33f2b;
 }
